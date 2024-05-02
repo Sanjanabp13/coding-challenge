@@ -202,7 +202,7 @@ where stockQuantity < (SELECT avg(stockQuantity) FROM products)
 select * from customers where customer_id IN (
     select customer_id from orders
      GROUP BY customer_id
-    HAVING SUM(total_price) >= 1800
+    HAVING SUM(total_price) >= 1000
 )
 
 
